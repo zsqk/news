@@ -10,4 +10,4 @@
 
 [2020-04-01 DynamoDB心得分享][1]
 
-[1]: https://zsqk.github.io/news/2020-04-01-rip
+[1]:https://github.com/zsqk/news/blob/master/2020-04-01.md
