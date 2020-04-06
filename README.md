@@ -8,6 +8,6 @@
 
 [1]: https://zsqk.github.io/news/2020-04-04-rip
 
-[2020-04-01 DynamoDB心得分享][1]
+[2020-04-01 DynamoDB心得分享][2]
 
-[1]:https://github.com/zsqk/news/blob/master/2020-04-01.md
+[2]:https://github.com/zsqk/news/blob/master/2020-04-01.md
