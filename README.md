@@ -10,6 +10,7 @@
 - [2020-03-28 ------------------ PHP, Go, Node.js 框架性能综合对比][3]
 - [2020-03-29 ------------------ Node.js生态中的流行包 request 正式被弃用][4]
 - [2020-03-30 ------------------ JavaScript ES6 简单数组去重][6]
+- [2020-03-31 ------------------ 从物理层面了解数据传输][9]
 - [2020-04-01 ------------------ Dynamodb心得分享][7]
 - [2020-04-04 ------------------ 司徒正美, 健康 (补)][8]
 
@@ -21,3 +22,4 @@
 [6]: https://github.com/zsqk/news/blob/master/2020-03-30-javascript-array-duplicate.md
 [7]:https://github.com/zsqk/news/blob/master/2020-04-01.md
 [8]:https://github.com/zsqk/news/blob/master/2020-04-04-rip.md
+[9]: 2020-03-31-use-ip-to-communicate.md
