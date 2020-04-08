@@ -14,11 +14,11 @@
 - [2020-04-01 ------------------ DynamoDB 心得分享][7]
 - [2020-04-04 ------------------ 司徒正美, 健康 (补)][8]
 
-[1]: _posts/2020-03-26-one-instance-have-multiple-ips.md
+[1]: 2020-03-26-one-instance-have-multiple-ips.md
 [2]: 2020-03-27.md
 [3]: 2020-03-28.md
 [4]: 2020-03-29.md
-[5]: 2020-03-25-vs-code-eclipse-theia.md
+[5]: _posts/2020-03-25-vs-code-eclipse-theia.md
 [6]: 2020-03-30-javascript-array-duplicate.md
 [7]: 2020-04-01-dynamodb.md
 [8]: 2020-04-04-rip.md
