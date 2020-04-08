@@ -1,8 +1,10 @@
-# VS Code, Eclipse Theia, Remote Development
+---
+title: VS Code, Eclipse Theia, Remote Development
+---
 
 ## Eclipse Theia
 
-项目: https://github.com/eclipse-theia/theia
+项目: <https://github.com/eclipse-theia/theia>
 
 说到前后分离可以运行在远端的编辑器甚至工作台, 我第一个想到的就是 VS Code.
 
@@ -40,7 +42,7 @@ Theia 官网说, 自己与 VS Code 最大的不同有三点:
 
 我们无需特别地在服务器端安装什么, 这一些都会在 VS Code 这个客户端中帮我们自动设置好. 当然, SSH 还是需要的.
 
-我们只需要在 VS Code 上安装 https://aka.ms/VSCodeRemoteExtensionPack 插件.
+我们只需要在 VS Code 上安装 <https://aka.ms/VSCodeRemoteExtensionPack> 插件.
 
 VS Code 这个插件通过 SSH 在服务器上自动安装了服务器端依赖.
 
