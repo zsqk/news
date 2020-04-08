@@ -25,7 +25,7 @@
 [7]: _posts/2020-04-01-dynamodb.md
 [8]: _posts/2020-04-04-rip.md
 [9]: _posts/2020-03-31-use-ip-to-communicate.md
-[9]: _posts/2020-04-07--Insert-Into-Select.md
+[10]: _posts/2020-04-07--Insert-Into-Select.md
 [11]: _posts/2020-04-08-internet-cafes-hack.md
 
 ## 分类
