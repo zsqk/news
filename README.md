@@ -25,5 +25,5 @@
 [9]: 2020-03-31-use-ip-to-communicate.md
 
 {% for post in site.categories.tools %}
-- [{{ post.date | date: "%Y-%m-%d" }} ------------------ {{ post.title }}]({{ post.url }})
+- [{{ post.date | date: "%Y-%m-%d" }} ------------------ {{ post.title }}]({{ post.url | absolute_url }})
 {% endfor %}
