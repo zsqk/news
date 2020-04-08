@@ -1,3 +1,4 @@
 title: news view
 # url: https://zsqk.github.io
 # baseurl: /news
+permalink: /:year-:month-:day-:slug:output_ext
