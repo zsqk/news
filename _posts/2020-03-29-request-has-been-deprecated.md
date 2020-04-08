@@ -1,4 +1,7 @@
-# Node.js 生态中的流行包 request 正式被弃用
+---
+title: Node.js 生态中的流行包 request 正式被弃用
+categories: [nodejs]
+---
 
 在 2019 年 3 月份, 作者就创建了[相关 issue][0] 讨论逐步让 request 进入历史.
 

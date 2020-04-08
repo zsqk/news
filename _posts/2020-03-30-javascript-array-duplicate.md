@@ -1,4 +1,7 @@
-# JavaScript ES6 简单数组去重
+---
+title: JavaScript ES6 简单数组去重
+categories: [javascript]
+---
 
 Set对象是值的集合，你可以按照插入的顺序迭代它的元素。 Set中的元素只会出现一次，即 Set 中的元素是唯一的。
 Set 本身是一个构造函数，用来生成 Set 数据结构。
