@@ -1,5 +1,6 @@
 ---
 title: VS Code, Eclipse Theia, Remote Development
+categories: [tools, vscode]
 ---
 
 ## Eclipse Theia

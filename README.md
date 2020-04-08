@@ -23,3 +23,7 @@
 [7]: 2020-04-01-dynamodb.md
 [8]: 2020-04-04-rip.md
 [9]: 2020-03-31-use-ip-to-communicate.md
+
+{% for post in site.categories.tools %}
+- [{{ post.date | date: "%Y-%m-%d" }} ------------------ {{ post.title }}][{{ post.url }}]
+{% endfor %}
