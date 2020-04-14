@@ -3,7 +3,7 @@
 每日新闻. 团队日志.
 
 ## 目录
-
+- [2020-04-14 ------------------ chrome小插件][19]
 - [2020-04-14 ------------------ 好代码][18]
 - [2020-04-13 ------------------ URL与跨域][17]
 - [2020-04-10 ------------------ 常见问题处理 npm fetchPackageMetaData error][15]
@@ -41,7 +41,7 @@
 [16]: _posts/2020-04-08-what-is-it-like-working-in-silicon-valley.md
 [17]: _posts/2020-04-13-url-and-http203.md
 [18]: _posts/2020-04-14-best-software-engineering-practices.md
-
+[19]: _posts/2020-04-14-chrome-plug
 ## 分类
 
 {% for category in site.categories %}
