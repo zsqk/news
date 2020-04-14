@@ -41,7 +41,7 @@
 [16]: _posts/2020-04-08-what-is-it-like-working-in-silicon-valley.md
 [17]: _posts/2020-04-13-url-and-http203.md
 [18]: _posts/2020-04-14-best-software-engineering-practices.md
-[19]: _posts/2020-04-14-chrome-plug
+[19]: _posts/2020-04-14-chrome-plug.md
 ## 分类
 
 {% for category in site.categories %}
