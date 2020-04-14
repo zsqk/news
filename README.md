@@ -3,6 +3,7 @@
 每日新闻. 团队日志.
 
 ## 目录
+- [2020-04-10 ------------------ 常见问题处理 npm fetchPackageMetaData error][15]
 - [2020-04-10 ------------------ 如何减少CPU消耗][13]
 - [2020-04-09 ------------------ 那些年哲学家们思考的问题][12]
 - [2020-04-08 ------------------ 那些年网吧被盗的账号][11]
@@ -32,6 +33,7 @@
 [12]: _posts/2020-04-09-questions-philosophers-ponder.md
 [13]: _posts/2020-04-10-how-to-reduce-cpu-consumption.md
 [14]: _posts/2020-04-08-nullish-coalescing-operator.md
+[15]: _posts/2020-04-10-npm-fetchpackagemetadata-error.md
 
 ## 分类
 
