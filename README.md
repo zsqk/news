@@ -3,6 +3,7 @@
 每日新闻. 团队日志.
 
 ## 目录
+- [2020-04-13 ------------------ URL与跨域][17]
 - [2020-04-10 ------------------ 常见问题处理 npm fetchPackageMetaData error][15]
 - [2020-04-10 ------------------ 如何减少CPU消耗][13]
 - [2020-04-09 ------------------ 那些年哲学家们思考的问题][12]
@@ -36,7 +37,7 @@
 [14]: _posts/2020-04-08-nullish-coalescing-operator.md
 [15]: _posts/2020-04-10-npm-fetchpackagemetadata-error.md
 [16]: _posts/2020-04-08-what-is-it-like-working-in-silicon-valley.md
-
+[17]: _posts/2020-04-13-url-and-http203.md
 
 ## 分类
 
