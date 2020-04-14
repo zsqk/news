@@ -1,3 +1,4 @@
+# 备稿: 常见问题处理 npm fetchPackageMetaData error ... Unexpected end of JSON input ...
 之前大多数项目都是使用 yarn, 但现在 yarn 正在切换到 berry, 有一些问题. 所以最近的新项目使用了 npm. 没想到, 这么多年过去, 依旧是坑.
 
 ---
