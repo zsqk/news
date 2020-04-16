@@ -53,3 +53,7 @@
 {% for category in site.categories %}
 - {{ category | first }}
 {% endfor %}
+
+## 其他
+
+模板: https://github.com/pages-themes/primer
