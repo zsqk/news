@@ -5,7 +5,7 @@ layout: default
 <ul>
   {% for post in site.posts | sort: 'date' | reverse %}
   <li>
-    <a href="{{ post.url | absolute_url }}">{{ post.date | date: "%Y-%m-%d" }} ———————————————
+    <a href="{{ post.url | absolute_url }}">{{ post.date | date: "%Y-%m-%d" }} ————————
       {{ post.title }}</a>
   </li>
   {% endfor %}
