@@ -3,3 +3,4 @@ title: news view
 # baseurl: /news
 permalink: /:year-:month-:day-:slug:output_ext
 google_analytics: UA-127498017-2
+lang: zh-CN
