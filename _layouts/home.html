@@ -2,9 +2,14 @@
 layout: default
 ---
 
-{% for post in site.posts | sort: 'date' | reverse %}
-- [{{ post.date | date: "%Y-%m-%d" }} ------------------ {{ post.title }}]({{ post.url | absolute_url }})
-{% endfor %}
+<ul>
+  {% for post in site.posts | sort: 'date' | reverse %}
+  <li>
+    <a href="{{ post.url | absolute_url }}">{{ post.date | date: "%Y-%m-%d" }} ------------------
+      {{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
 
 {% for category in site.categories %}
 - {{ category | first }}
