@@ -1,5 +1,6 @@
 ---
 title: 倪光南
+categories: [people]
 author: iugo
 ---
 
