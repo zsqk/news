@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{% for post in site.posts | sort: 'date' | reverse %}
+- [{{ post.date | date: "%Y-%m-%d" }} ------------------ {{ post.title }}]({{ post.url | absolute_url }})
+{% endfor %}
+
+{% for category in site.categories %}
+- {{ category | first }}
+{% endfor %}
