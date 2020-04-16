@@ -1,0 +1,8 @@
+---
+layout: default
+---
+{{ content }}
+
+{% for category in post.categories %}
+- {{ category | first }}
+{% endfor %}
