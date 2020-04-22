@@ -122,5 +122,5 @@ Hints:
 > 2. For each character in the given string, greedily match it to a possible "croak".
 
 [0]: https://leetcode.com/problems/minimum-number-of-frogs-croaking/
-[1]: _posts/2020-04-08-working-experience-in-silicon-valley.md
+[1]: 2020-04-08-working-experience-in-silicon-valley
 [2]: https://leetcode.com/problems/minimum-number-of-frogs-croaking/discuss/591884/JavaScript-Solution-faster-than-85.98-memory-less-than-100.00>
