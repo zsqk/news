@@ -1,6 +1,6 @@
 ---
 title: 编程题 聒噪的青蛙
-categories: [leetcode]
+categories: [leetcode, javascript]
 author: iugo
 ---
 
