@@ -15,9 +15,11 @@
 1. [输入需要下载的网页的网址，点击添加。](url
 ![image](https://user-images.githubusercontent.com/19698815/79931742-47964e80-847e-11ea-88d3-8f520284dbe8.png)
 )
+
 2. [选择保存地址，点击开始下载。](url
 ![image](http://www.xue51.com/uppic/180404/201804041643079989.png)
 )
+
 3. [等待下载完成，打开保存地址里面的文件就可以了。](url
 ![image](http://www.xue51.com/uppic/180404/201804041643144531.png)
 )
