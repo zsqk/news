@@ -4,6 +4,7 @@
 
 ## 目录
 
+- [2020-04-23 ------------------ Photoshop使用智能锐化将图片变清晰][27]
 - [2020-04-22 ------------------ 仿站小工具][26]
 - [2020-04-21 ------------------ RabbitMQ简介以及使用场景][25]
 - [2020-04-17 ------------------ OSI七层模型下四层的数据封装和解封装][24]
@@ -57,6 +58,7 @@
 [24]: _posts/2020-04-17-data-encapsulation-and-unencapsulation.md
 [25]: _posts/2020-04-21-rabbitmq.md
 [26]: _posts/2020-04-22-site-by-station-gadgets.md
+[27]: _posts/2020-04-23-photoshop-sharpens-image.md
 
 ## 分类
 
