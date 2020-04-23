@@ -60,12 +60,6 @@
 [26]: _posts/2020-04-22-site-by-station-gadgets.md
 [27]: _posts/2020-04-23-photoshop-sharpens-image.md
 
-## 分类
-
-{% for category in site.categories %}
-- {{ category | first }}
-{% endfor %}
-
 ## 其他
 
-模板: https://github.com/pages-themes/primer
+模板: <https://github.com/pages-themes/primer>
