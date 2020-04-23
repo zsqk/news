@@ -1,4 +1,4 @@
-### **Phptoshop使用智能锐化将图片变清晰**
+### **Photoshop使用智能锐化将图片变清晰**
 1.首先打开PS并打开一张图片，复制一个图层
 ![image](https://user-images.githubusercontent.com/19698815/80054376-a5e03180-8551-11ea-995a-de4cbaa15837.png)
 2.然后点击菜单栏上的滤镜，下面的锐化，选择锐化下面的智能锐化
