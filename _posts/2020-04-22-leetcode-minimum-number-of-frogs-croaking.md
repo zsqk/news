@@ -121,6 +121,83 @@ Hints:
 > 1. keep the frequency of all characters from "croak" using a hashmap.
 > 2. For each character in the given string, greedily match it to a possible "croak".
 
+## 更新
+
+第二天早上又花了一点时间写了两个版本:
+
+通用版: <https://leetcode.com/submissions/detail/328828305/>
+
+性能版: <https://leetcode.com/submissions/detail/328832285/>
+
+再翻看大家的讨论, 看到其他语言基本与我的性能版思路一致, 但通用版大家都没怎么写.
+
+在我目前的实际工作中, 性能要求并不高, 我们更期望可读性强的代码.
+
+这道题前前后后, 写代码, 整理思路, 发帖, 花了两三个小时, 我想
+改动一下是可以作为笔试题了.
+
+通用版代码就不写了, 以下是性能版源代码:
+
+```js
+/**
+ * @param {string} croakOfFrogs
+ * @return {number}
+ */
+var minNumberOfFrogs = function (croakOfFrogs) {
+  // 多出的数量
+  let max = 0;
+
+  // 储存鸣叫数量
+  let c = 0;
+  let r = 0;
+  let o = 0;
+  let a = 0;
+  let k = 0;
+
+  for (let i = 0; i < croakOfFrogs.length; i++) {
+    const v = croakOfFrogs[i];
+    switch (v) {
+      case "c":
+        c += 1;
+        break;
+      case "r":
+        r += 1;
+        if (r > c) {
+          return -1;
+        }
+        break;
+      case "o":
+        o += 1;
+        if (o > r) {
+          return -1;
+        }
+        break;
+      case "a":
+        a += 1;
+        if (a > o) {
+          return -1;
+        }
+        break;
+      case "k":
+        k += 1;
+        if (k > a) {
+          return -1;
+        }
+        if (c - k > max) {
+          max = c - k;
+        }
+        break;
+      default:
+        return -1;
+    }
+  }
+  if (c !== k) {
+    return -1;
+  }
+  return max + 1;
+};
+```
+
 [0]: https://leetcode.com/problems/minimum-number-of-frogs-croaking/
 [1]: 2020-04-08-working-experience-in-silicon-valley
 [2]: https://leetcode.com/problems/minimum-number-of-frogs-croaking/discuss/591884/JavaScript-Solution-faster-than-85.98-memory-less-than-100.00>
