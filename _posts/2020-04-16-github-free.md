@@ -25,3 +25,14 @@ GitHub 的这次变动主要瞄准的应该是 GitLab 的用户. 从价格上做
 
 [0]: https://github.blog/2020-04-14-github-is-now-free-for-teams/
 [1]: https://github.com/pricing
+
+Update 2020-04-23:
+
+顺便提一下 GitLab 官方对 GitHub 此次行为的回应:
+
+<https://about.gitlab.com/blog/2020/04/14/github-free-for-teams/>
+
+然后我最近发现之前已经给过体验机会的 Gold 计划再次免费 30 天.
+
+> Free Trial of GitLab.com Gold  
+> Try all GitLab has to offer for 30 days. No credit card required.
