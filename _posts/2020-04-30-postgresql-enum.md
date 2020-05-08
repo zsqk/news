@@ -1,4 +1,8 @@
-# 关于使用 PostgreSQL 的 ENUM 类型
+---
+title: 关于使用 PostgreSQL 的 ENUM 类型
+categories: [postgresql]
+author: iugo
+---
 
 数据库版本 v9.6
 
