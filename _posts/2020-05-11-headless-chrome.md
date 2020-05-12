@@ -1,4 +1,9 @@
-# Headless Chrome
+---
+title: Headless Brower
+slug: Headless Brower
+categories: [DevTools, Chrome]
+author: kouler
+---
 
 ## Headless Brower
 `Headless Brower` 直译为中文是无头浏览器。其中的无头是指没有图形界面的意思。也就是通过代码来控制与浏览器的交互。比如捕获页面内容加载完成事件，执行按钮的点击事件，执行键盘输入，表单提交等。
