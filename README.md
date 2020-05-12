@@ -4,6 +4,8 @@
 
 ## 目录
 
+- [2020-05-10 ------------------ Headless Chrome][35]
+- [2020-05-09 ------------------ 如何用 CSS 自定义使用 Font Awesome 图标][34]
 - [2020-05-08 ------------------ 什么是CloudWatch][33]
 - [2020-05-06 ------------------ awesome系列github上超有名的Topic][32]
 - [2020-04-30 ------------------ 关于使用 PostgreSQL 的 ENUM 类型][31]
@@ -71,6 +73,8 @@
 [31]: _posts/2020-04-30-postgresql-enum.md
 [32]: _posts/2020-05-06-awesome.md
 [33]: _posts/2020-05-08-cloudwatch.md
+[34]: _posts/2020-05-09-font-awesome.md
+[35]: _posts/2020-05-11-headless-chrome.md
 
 ## 其他
 
