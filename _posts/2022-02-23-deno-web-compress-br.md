@@ -1,6 +1,6 @@
 ---
 title: 在 Deno 中实现 HTTP 返回 body 的 Brotli 压缩
-categories: [deno]
+categories: [deno, web, HTTP, Brotli]
 author: iugo
 ---
 
