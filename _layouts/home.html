@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% include head.html %}
+
 <ul>
   {% for post in site.posts | sort: 'date' | reverse %}
   <li>
