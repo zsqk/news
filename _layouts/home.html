@@ -5,12 +5,14 @@ layout: default
 <ul>
   {% for post in site.posts | sort: 'date' | reverse %}
   <li>
-    <a href="{{ post.url | absolute_url }}">{{ post.date | date: "%Y-%m-%d" }} ————————
-      {{ post.title }}</a>
+    <a href="{{ post.url | absolute_url }}">
+      {{ post.date | date: "%Y-%m-%d" }} ———— {{ post.title }}
+    </a>
   </li>
   {% endfor %}
 </ul>
 
+<h2>Categories</h2>
 {% for category in site.categories %}
-- {{ category | first }}
+- {{ category | first }} ({{ category | last | size }})
 {% endfor %}
