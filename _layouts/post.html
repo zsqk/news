@@ -3,14 +3,10 @@ layout: default
 ---
 {{ content }}
 
-<div class="post-meta Box p-3 mt-3">
-  {% if page.categories.size > 0 %}
-  <div class="d-flex flex-wrap mb-2">
-    {% for category in page.categories %}
-    <a class="Label mr-1 mb-1" href="{{ site.baseurl }}/category/{{ category | slugify }}">{{ category }}</a>
-    {% endfor %}
-  </div>
-  {% endif %}
+<div class="post-meta">
+  {% for category in page.categories %}
+  - <a href="{{ site.baseurl }}/category/{{ category | slugify }}">{{ category }}</a>
+  {% endfor %}
 
   {% if page.author %}
   <div class="text-gray">
