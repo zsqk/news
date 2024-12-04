@@ -14,5 +14,5 @@ layout: default
 
 <h2>Categories</h2>
 {% for category in site.categories %}
-- <a href="{{ site.baseurl }}/categories/{{ category | first | slugify }}">{{ category | first }}</a> ({{ category | last | size }})
+- <a href="{{ site.baseurl }}/category/{{ category | first | slugify }}/">{{ category | first }}</a> ({{ category | last | size }})
 {% endfor %}
