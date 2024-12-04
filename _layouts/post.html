@@ -3,6 +3,19 @@ layout: default
 ---
 {{ content }}
 
-{% for category in page.categories %}
-- <a href="{{ site.baseurl }}/category/{{ category | slugify }}">{{ category }}</a>
-{% endfor %}
+<div class="post-meta Box p-3 mt-3">
+  {% if page.categories.size > 0 %}
+  <div class="d-flex flex-wrap mb-2">
+    {% for category in page.categories %}
+    <a class="Label mr-1 mb-1" href="{{ site.baseurl }}/category/{{ category | slugify }}">{{ category }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if page.author %}
+  <div class="text-gray">
+    <svg class="octicon octicon-person" viewBox="0 0 16 16" width="16" height="16"><path d="M10.5 5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm.061 3.073a4 4 0 1 0-5.123 0 6.004 6.004 0 0 0-3.431 5.142.75.75 0 0 0 1.498.07 4.5 4.5 0 0 1 8.99 0 .75.75 0 1 0 1.498-.07 6.005 6.005 0 0 0-3.432-5.142Z"></path></svg>
+    <span class="ml-1">{{ page.author }}</span>
+  </div>
+  {% endif %}
+</div>

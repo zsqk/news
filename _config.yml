@@ -4,3 +4,8 @@ title: news view
 permalink: /:year-:month-:day-:slug:output_ext
 google_analytics: UA-127498017-2
 lang: zh-CN
+
+# 添加以下配置来使用 primer 主题
+remote_theme: pages-themes/primer@v0.6.0
+plugins:
+  - jekyll-remote-theme
