@@ -10,8 +10,3 @@ remote_theme: pages-themes/primer@v0.6.0
 plugins:
   - jekyll-remote-theme
   - jemoji
-
-jemoji:
-  img:
-    width: 1em
-    height: 1em
