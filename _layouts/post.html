@@ -5,7 +5,7 @@ layout: default
 
 <div class="post-meta">
   {% for category in page.categories %}
-  - <a href="https://www.google.com/search?q=site%3A{{ site.baseurl | url_encode }}+{{ category | url_encode }}">{{ category }}</a>
+  - <a href="https://www.google.com/search?q=site%3A{{ site.url | append: site.baseurl | url_encode }}+{{ category | url_encode }}">{{ category }}</a>
   {% endfor %}
 
   {% if page.author %}
