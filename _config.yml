@@ -2,7 +2,7 @@ title: news view
 # url: https://zsqk.github.io
 # baseurl: /news
 permalink: /:year-:month-:day-:slug:output_ext
-google_analytics: UA-127498017-2
+gtm_id: GTM-T9BR365F
 lang: zh-CN
 
 # 添加以下配置来使用 primer 主题
