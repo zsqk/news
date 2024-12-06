@@ -1,6 +1,6 @@
 title: news view
-# url: https://zsqk.github.io
-# baseurl: /news
+url: https://zsqk.github.io
+baseurl: /news
 permalink: /:year-:month-:day-:slug:output_ext
 gtm_id: GTM-T9BR365F
 lang: zh-CN
