@@ -3,7 +3,7 @@ title: 帮助色盲和色弱使用软件
 author: iugo
 date: 2024-12-09
 last_modified_at: 2024-12-10
-categories: [web, design, accessibility]
+categories: [web, design, color, accessibility]
 ---
 
 在做 Web 设计的时候, 应该考虑色盲和色弱的人更方便使用软件. 这部分内容常被称作

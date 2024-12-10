@@ -3,7 +3,7 @@ title: Ionic 颜色
 author: iugo
 date: 2024-12-10 12:00:00+08:00
 last_modified_at: 2024-12-10 12:00:00+08:00
-categories: [web, design, color]
+categories: [web, design, color, ionic]
 ---
 
 Ionic 颜色的文档为: [Ionic Colors](https://ionicframework.com/docs/theming/colors).
