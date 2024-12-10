@@ -4,6 +4,9 @@ categories: [deno, web, http, brotli]
 author: iugo
 ---
 
+> :warning: 本文是 2022 年 2 月 23 日写的, 现在 Deno 已经有了变动,
+> 所以本文在部分地方可能已经过时.
+
 在 9 个月之前, 我们在项目中创建了这则 issue, 今天, 伴随着 Deno 最近标准库的变动,
 我们对此进行更加系统地说明.
 
