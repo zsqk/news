@@ -1,6 +1,6 @@
 ---
 title: 隐藏 SSID (Wi-Fi 安全性分析:隐藏 SSID 的作用与局限)
-categories: [网络安全, Wi-Fi]
+categories: [security, wifi]
 author: iugo
 ---
 
