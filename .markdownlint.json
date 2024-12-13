@@ -1,6 +1,6 @@
 {
   "default": true,
   "MD033": {
-    "allowed_elements": ["details", "summary"]
+    "allowed_elements": ["details", "summary", "div"]
   }
 }

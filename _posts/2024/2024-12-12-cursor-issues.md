@@ -8,6 +8,7 @@ last_modified_at: 2024-12-13 11:05+08:00
 
 <details lang="zh" open>
 <summary>中文版本</summary>
+<div markdown="1">
 
 对于中国国内开发者来说, Cursor 尤其好用. 因为通过 Cursor 可以使用多种大语言模型,
 并且可以避免自己直接订阅导致封号等风险.
@@ -29,10 +30,12 @@ VS Code 在这方面做的就很好. 但是 Cursor 无法在统一用户的多�
 
 Cursor 还需要把编辑器本身的工作做好啊.
 
+</div>
 </details>
 
 <details lang="en">
 <summary>English Version</summary>
+<div markdown="1">
 
 For developers in China, Cursor is particularly useful because it provides access
 to various large language models while avoiding the risks of direct subscription
@@ -60,4 +63,5 @@ On Mac, it doesn't support opening folders by dragging them onto the icon.
 
 Cursor needs to improve its core editor functionality.
 
+</div>
 </details>
