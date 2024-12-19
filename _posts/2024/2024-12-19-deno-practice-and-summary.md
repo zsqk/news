@@ -11,7 +11,11 @@ last_modified_at: 2024-12-19 09:48+08:00
 1. 直接使用 import 进行相对路径的文件引用.
 2. 直接使用 import 进行 HTTPS 绝对路径的文件引用.
    2.1. 比如使用 deno.land 的包 (仅限公共包).
-   2.2. 比如使用 GitHub 的包.
+   2.2. 比如使用 GitHub 的包 (raw.githubusercontent.com).
+   2.3. 如 <https://esm.sh/>
+   2.4. 如 <https://jspm.org/>
+   2.5. 如 <https://www.skypack.dev/>
+   2.6. 如 <https://www.jsdelivr.com/esm>
 3. 引用 npm 包.
 4. 引用 jsr 包. (仅限公共包).
 
