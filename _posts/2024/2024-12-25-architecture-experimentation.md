@@ -1,6 +1,7 @@
 ---
 title: 软件架构与实验艺术
-author: iugo
+categories: [architecture]
+author: 翻译转载
 date: 2024-12-25
 last_modified_at: 2025-01-02 10:02+08:00
 ---
