@@ -7,7 +7,7 @@ last_modified_at: 2025-01-02 10:02+08:00
 ---
 
 > :bulb: 原文链接:
-> <https://www.infoq.com/articles/software-architecture-experimentation/>
+> <https://www.infoq.com/articles/architecture-experimentation/>
 
 在软件架构领域, 我们经常会做出许多决策. 有些决策会带来积极的影响,
 而有些则会产生消极的后果. 在做出这些决策时, 我们往往会陷入两难境地:
