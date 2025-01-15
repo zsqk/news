@@ -95,6 +95,16 @@ const result = await Promise.resolve(0)
 console.log(result); // 13
 ```
 
+并且这种做法可以仅仅使用匿名函数, 不使用函数, 在一些小变动的时候很方便:
+
+```ts
+const result = await Promise.resolve(0)
+  .then(x => x + 5)
+  .then(x => x * 2)
+  .then(x => x + 3);
+console.log(result); // 13
+```
+
 目前这是我最常用的方法. 但是缺点是强制将代码转为了异步.
 
 ## JS Pipe Operator (管道操作符) 提案
