@@ -3,7 +3,7 @@ title: JS 中的链式调用
 categories: [javascript, ecmascript]
 author: iugo
 date: 2025-01-14
-last_modified_at: 2025-01-14 12:01+08:00
+last_modified_at: 2025-01-15 15:48+08:00
 ---
 
 ## 数组中的链式调用
