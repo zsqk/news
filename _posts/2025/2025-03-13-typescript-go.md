@@ -34,7 +34,7 @@ Go 语言进行编译器移植的原因主要包括:
 4. **开发效率**: Go 语言的错误处理模式, 简单的语法和快速的编译时间,
    让开发团队能够快速迭代和实现功能
 
-C/C++ 的跨平台能力较差, 比如不支持简单编译为各个平台的二进制文件.
+C/C++ 的跨平台能力较差, 比如不支持简单编译为各个平台的单一二进制文件.
 而 Rust 的内存安全模型过于复杂, 不适合作为 port 项目.
 C# 应该更多是语言特性上与 TypeScript 有区别, 严格的 OOP 风格不适合作为 port.
 
@@ -63,7 +63,8 @@ TypeScript 6 和 TypeScript 7 的 API 是完全兼容的, 所以开发者可以�
 的星标. 许多开发者对于提升 TypeScript 性能的前景表示期待, 特别是那些处理大型
 代码库的团队.
 
-社区讨论主要集中在性能提升, 工具链兼容性以及为什么选择 Go 而非其他语言 (如 Rust) 上.
+社区讨论主要集中在性能提升, 工具链兼容性以及 [为什么选择 Go][why-go]
+而非其他语言 (如 Rust) 上.
 
 ## 相关链接
 
@@ -72,3 +73,4 @@ TypeScript 6 和 TypeScript 7 的 API 是完全兼容的, 所以开发者可以�
 
 [faster-ts]: https://devblogs.microsoft.com/typescript/typescript-native-port/
 [repo]: https://github.com/microsoft/typescript-go
+[why-go]: https://github.com/microsoft/typescript-go/discussions/411
