@@ -1,10 +1,10 @@
 # news
 
-每日新闻 (或旧闻思考). 团队日志.
+每日新聞 (或舊聞思考). 團隊日誌.
 
-站点为: <https://zsqk.github.io/news/>
+站點為: <https://zsqk.github.io/news/>
 
-站点地图为: <https://zsqk.github.io/news/sitemap.xml>
+站點地圖為: <https://zsqk.github.io/news/sitemap.xml>
 
 ## 其他
 

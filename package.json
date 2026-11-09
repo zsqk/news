@@ -1,7 +1,7 @@
 {
   "name": "news",
   "version": "1.0.0",
-  "description": "每日新闻 (或旧闻思考). 团队日志.",
+  "description": "每日新聞 (或舊聞思考). 團隊日誌.",
   "type": "module",
   "engines": {
     "node": ">=26"

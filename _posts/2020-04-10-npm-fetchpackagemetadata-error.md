@@ -1,40 +1,40 @@
-# 常见问题处理 npm fetchPackageMetaData error ... Unexpected end of JSON input ...
-之前大多数项目都是使用 yarn, 但现在 yarn 正在切换到 berry, 有一些问题. 所以最近的新项目使用了 npm. 没想到, 这么多年过去, 依旧是坑.
+# 常見問題處理 npm fetchPackageMetaData error ... Unexpected end of JSON input ...
+之前大多數項目都是使用 yarn, 但現在 yarn 正在切換到 berry, 有一些問題. 所以最近的新項目使用了 npm. 沒想到, 這麼多年過去, 依舊是坑.
 
 ---
 
-npm 的确是有效率问题的. 并且有一些低级问题没有进行处理.
+npm 的確是有效率問題的. 並且有一些低級問題沒有進行處理.
 
-效率问题比如依赖之间关系梳理的复杂, 效率低. 具体不展开了, 但实际使用感受已经足够说明问题.
-是 Yarn 存在的意义. 同时也是 deno 想要避免的.
+效率問題比如依賴之間關係梳理的複雜, 效率低. 具體不展開了, 但實際使用感受已經足夠說明問題.
+是 Yarn 存在的意義. 同時也是 deno 想要避免的.
 
-这里说一下在国内都可能遇到的问题:
+這裡說一下在國內都可能遇到的問題:
 
-1. 网络原因导致包下载失败.
-2. 再次尝试仍然从缓存中拿失败的数据.
-3. 如果不清除缓存, 一直无法跳过失败数据.
+1. 網絡原因導致包下載失敗.
+2. 再次嘗試仍然從緩存中拿失敗的數據.
+3. 如果不清除緩存, 一直無法跳過失敗數據.
 
 ```text
 http fetch GET 304 https://registry.npmjs.org/cssnano-preset-default 982ms (from cache)
 silly fetchPackageMetaData error for cssnano-preset-default@^4.0.7 Unexpected end of JSON input while parsing near '...E1piZamJTcxPxUDG/h3FS'
 ```
 
-其实这里可以增加一个简单的判断, 如果 JSON 化失败, 则判断为网络问题, 不再从缓存中拿数据.
+其實這裡可以增加一個簡單的判斷, 如果 JSON 化失敗, 則判斷為網絡問題, 不再從緩存中拿數據.
 
-无法单独清除某缓存, 比如 `npm cache clean https://registry.npmjs.org/cssnano-preset-default`.
+無法單獨清除某緩存, 比如 `npm cache clean https://registry.npmjs.org/cssnano-preset-default`.
 
-缓存一致性检查 `npm cache verify` 奇慢.
+緩存一致性檢查 `npm cache verify` 奇慢.
 
-无奈只好使用 `npm cache clean --force` 清除所有缓存.
+無奈只好使用 `npm cache clean --force` 清除所有緩存.
 
-想到清除所有缓存后, 随之而来的所有依赖被重新下载, 想想都头疼.
+想到清除所有緩存後, 隨之而來的所有依賴被重新下載, 想想都頭疼.
 
-这真是一个太明显并且太严重的问题了. 网上许多 npm 包的 issues 都是因为 npm 的这一问题.
+這真是一個太明顯並且太嚴重的問題了. 網上許多 npm 包的 issues 都是因為 npm 的這一問題.
 
-重新安装依赖中, 太慢了... 不过起码能用, 比代理会快点.
+重新安裝依賴中, 太慢了... 不過起碼能用, 比代理會快點.
 
-可是 Yarn berry 还是许多问题, 比如 https://github.com/yarnpkg/berry/issues/1149.
+可是 Yarn berry 還是許多問題, 比如 https://github.com/yarnpkg/berry/issues/1149.
 
-使用淘宝镜像吧: https://developer.aliyun.com/mirror/NPM
+使用淘寶鏡像吧: https://developer.aliyun.com/mirror/NPM
 
-即便使用镜像, 还是挺慢的.
+即便使用鏡像, 還是挺慢的.

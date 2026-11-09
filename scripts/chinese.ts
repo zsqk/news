@@ -105,16 +105,14 @@ export function transformMarkdown(
     return `<${protect(url)}>`;
   });
 
-  // 5. Protect standalone URLs: https://... or http://...
-  text = text.replace(/\b(https?:\/\/[^\s<>()]+)/g, (full) => protect(full));
-
-  // 6. Protect HTML tag attributes like src="..." and href="..."
+  // 5. Protect HTML tag attributes like src="..." and href="..."
   text = text.replace(
-    /(<[a-zA-Z0-9_-]+\b[^>]*\b(?:src|href)=["'])([^"']+)(["'][^>]*>)/gi,
-    (_full, p1, url, p2) => {
-      return `${p1}${protect(url)}${p2}`;
-    },
+    /\b(src|href)=["']([^"'\r\n]+)["']/gi,
+    (_full, attr, val) => `${attr}="${protect(val)}"`,
   );
+
+  // 6. Protect standalone URLs: https://... or http://...
+  text = text.replace(/\b(https?:\/\/[^\s<>()]+)/g, (full) => protect(full));
 
   // 7. Handle YAML frontmatter keys at file start
   const fmMatch = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n/);
@@ -165,6 +163,17 @@ function findDifferences(
       origStr[i] !== convStr[i] &&
       /[\u4e00-\u9fa5]/.test(origStr[i])
     ) {
+      // Exclude legitimate Traditional Chinese characters that are over-converted by phrase matching
+      // e.g. "了" in "為了" over-converted to "瞭", "干" in "干擾" over-converted to "幹", "里" in "亞里士多德"
+      if (
+        (origStr[i] === "了" && convStr[i] === "瞭") ||
+        (origStr[i] === "干" && convStr[i] === "幹") ||
+        (origStr[i] === "里" && convStr[i] === "裡")
+      ) {
+        i++;
+        continue;
+      }
+
       const start = i;
       let origWord = "";
       let convWord = "";
@@ -258,6 +267,10 @@ export function lintMarkdown(
         return label + "(" + " ".repeat(url.length) + (title ? " " + title : "") + ")";
       },
     );
+    maskedLine = maskedLine.replace(
+      /\b(src|href)=["']([^"'\r\n]+)["']/gi,
+      (_full, attr, val) => `${attr}="${" ".repeat(val.length)}"`,
+    );
 
     const convLine = converter(maskedLine);
     const diffs = findDifferences(maskedLine, convLine, 0);
@@ -311,7 +324,8 @@ export function getChangedMarkdownFiles(since = "origin/main"): string[] {
  * Discovers markdown files recursively using Node.js readdir.
  */
 export async function collectFiles(targets: string[]): Promise<string[]> {
-  const searchDirs = targets.length > 0 ? targets : ["_posts"];
+  const defaultTargets = ["_posts", "tools.md", "README.md"];
+  const searchDirs = targets.length > 0 ? targets : defaultTargets;
   const files: string[] = [];
 
   for (const target of searchDirs) {
@@ -477,7 +491,7 @@ ${c.bold}OPTIONS:${c.reset}
   ${c.green}--verbose, -v${c.reset}    (lint only) Show full line snippets for every issue
   ${c.green}--ignore-code${c.reset}    Leave code blocks and inline code untouched
   ${c.green}--to=<variant>${c.reset}   Target traditional variant: 'tw' (default), 't', or 'hk'
-  ${c.green}-h, --help${c.reset}       Show this help message
+  -h, --help       Show this help message
 
 ${c.bold}EXAMPLES:${c.reset}
   ${c.dim}# Lint all posts${c.reset}
