@@ -1,0 +1,26 @@
+{
+  "name": "news",
+  "version": "1.0.0",
+  "description": "每日新闻 (或旧闻思考). 团队日志.",
+  "type": "module",
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "lint:cn": "node scripts/chinese.ts lint",
+    "lint:cn:changed": "node scripts/chinese.ts lint --changed",
+    "lint:cn:staged": "node scripts/chinese.ts lint --staged",
+    "convert:cn": "node scripts/chinese.ts convert",
+    "convert:cn:dry": "node scripts/chinese.ts convert --dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zsqk/news.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@std/cli": "npm:@jsr/std__cli@^1.0.32",
+    "@std/path": "npm:@jsr/std__path@^1.1.6",
+    "opencc-js": "^1.4.2"
+  }
+}

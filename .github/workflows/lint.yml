@@ -1,0 +1,48 @@
+name: Lint
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      check_all:
+        description: "Check all files instead of only changed files"
+        type: boolean
+        default: false
+
+jobs:
+  lint-chinese:
+    name: Check Traditional Chinese
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 26
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify Traditional Chinese
+        run: |
+          if [ "${{ github.event.inputs.check_all }}" = "true" ]; then
+            echo "Checking all markdown posts..."
+            npm run lint:cn
+          elif [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "Checking files modified in pull request..."
+            node scripts/chinese.ts lint --since origin/${{ github.base_ref }}
+          elif [ -n "${{ github.event.before }}" ] && [ "${{ github.event.before }}" != "0000000000000000000000000000000000000000" ]; then
+            echo "Checking files modified in push..."
+            node scripts/chinese.ts lint --since ${{ github.event.before }}
+          else
+            echo "Checking all markdown files..."
+            npm run lint:cn
+          fi
