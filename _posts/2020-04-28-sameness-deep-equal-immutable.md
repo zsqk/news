@@ -6,36 +6,36 @@ author: iugo
 
 ## 相等
 
-- Strict Equality Comparison `===` 严格相等
+- Strict Equality Comparison `===` 嚴格相等
 - Abstract Equality Comparison `==` 大概相等
 - [SameValueZero][1]
 - SameValue
 
-### `===` 与 `==` 的区别
+### `===` 與 `==` 的區別
 
-如果两值类型相等, 则两种对比没有区别. `==` 的主要功能是隐性地类型转换.
+如果兩值類型相等, 則兩種對比沒有區別. `==` 的主要功能是隱性地類型轉換.
 
-如果一个为 `Number` 另一个为 `String`, 则将 `String` 转为 Number 类型进行对比.
+如果一個為 `Number` 另一個為 `String`, 則將 `String` 轉為 Number 類型進行對比.
 
-如果任意一个为 `Boolean`, 则将 `Boolean` 转为 Number 类型进行对比.
+如果任意一個為 `Boolean`, 則將 `Boolean` 轉為 Number 類型進行對比.
 
-如果任意一个为 `Object`, 则调用 `.toString()` 转类型.
+如果任意一個為 `Object`, 則調用 `.toString()` 轉類型.
 
-转为 Number 类型时, 需要注意: `true => 1, false => +0, null => +0`.
+轉為 Number 類型時, 需要注意: `true => 1, false => +0, null => +0`.
 
-总结如下:
+總結如下:
 
-| 类型      | 转换        |
+| 類型      | 轉換        |
 | --------- | ----------- |
-| null      | 不转换      |
-| undefined | 不转换      |
-| Number    | 不转换      |
-| String    | 转为 Number |
-| Object    | 转为 String |
+| null      | 不轉換      |
+| undefined | 不轉換      |
+| Number    | 不轉換      |
+| String    | 轉為 Number |
+| Object    | 轉為 String |
 | `true`    | `1`         |
 | `false`   | `+0`        |
 
-依据上面的规则, 我们可以得到以下结果.
+依據上面的規則, 我們可以得到以下結果.
 
 ```js
 null == undefined;
@@ -49,27 +49,27 @@ NaN == "NaN";
 !({} == false);
 ```
 
-有些是我们想要的, 但有些不是. 因为这种类型转换的复杂性, 不建议使用 `==`.
+有些是我們想要的, 但有些不是. 因為這種類型轉換的複雜性, 不建議使用 `==`.
 
-### SameValueZero 与 SameValue 的区别
+### SameValueZero 與 SameValue 的區別
 
-主要区别在于是否区分 `-0` 与 `+0`. SameValue 区分, SameValueZero 则不区分.
+主要區別在於是否區分 `-0` 與 `+0`. SameValue 區分, SameValueZero 則不區分.
 
-这是历史遗留问题, 我们一般不会直接遇到该问题.
+這是歷史遺留問題, 我們一般不會直接遇到該問題.
 
-### `===` 与 SameValueZero 的区别
+### `===` 與 SameValueZero 的區別
 
-主要区别在于是否区分两个 `NaN`, `===` 区分, SameValueZero 则不区分.
+主要區別在於是否區分兩個 `NaN`, `===` 區分, SameValueZero 則不區分.
 
-## 赋值
+## 賦值
 
-整个 [Assignment Operators][2] 比较复杂, 简单说运算符右侧使用的 [GetValue][3].
+整個 [Assignment Operators][2] 比較複雜, 簡單說運算符右側使用的 [GetValue][3].
 
-如果不是引用类型, 则只是返回该值就好.
+如果不是引用類型, 則只是返回該值就好.
 
-如果是引用类型, 则将该值复制. 如果右侧为对象, 则创建该值的引用.
+如果是引用類型, 則將該值複製. 如果右側為對象, 則創建該值的引用.
 
-## 深度对比与不可变值
+## 深度對比與不可變值
 
 概念:
 
@@ -78,21 +78,21 @@ NaN == "NaN";
 - memoization
 - immutable object
 
-应用:
+應用:
 
 - `JSON.stringify`
 - lodash/isEqual
 - memoize-one
 - [immutability-helper][5]
 
-## 结论
+## 結論
 
-一般来说, 我们避免使用 `==`, 要使用 `===`.
+一般來說, 我們避免使用 `==`, 要使用 `===`.
 
-在处理复杂对象同时为了优化性能时, 我们会使用 memo 的方法, 但如何更好判断依赖项
-是否发生了变化, 我们只要在每次变化时, 把这个复杂对象当作 immutable object 就好.
+在處理複雜對象同時為了優化性能時, 我們會使用 memo 的方法, 但如何更好判斷依賴項
+是否發生了變化, 我們只要在每次變化時, 把這個複雜對象當作 immutable object 就好.
 
-当我们使用了 immutable object, 就不再那么需要 deep copy 和 deep equal 了.
+當我們使用了 immutable object, 就不再那麼需要 deep copy 和 deep equal 了.
 
 [1]: https://ecma-international.org/ecma-262/#sec-samevaluezero
 [2]: https://tc39.es/ecma262/#sec-assignment-operators

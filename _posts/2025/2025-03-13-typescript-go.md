@@ -1,75 +1,75 @@
 ---
-title: TypeScript 使用 Go 进行了重构
+title: TypeScript 使用 Go 進行了重構
 author: iugo
 categories: [typescript, go, programming-language, microsoft]
 ---
 
-我在 GitHub 上看到了 @ahejlsberg 为 <https://github.com/microsoft/typescript-go>
-project 点了 star.
+我在 GitHub 上看到了 @ahejlsberg 為 <https://github.com/microsoft/typescript-go>
+project 點了 star.
 
-在 11 日, TypeScript 官方博客发布了一篇名为 [A 10x Faster TypeScript][faster-ts]
-的文章, 介绍了微软正在使用 Go 语言重写 TypeScript 编译器, 并取得了显著的性能提升.
+在 11 日, TypeScript 官方博客發佈了一篇名為 [A 10x Faster TypeScript][faster-ts]
+的文章, 介紹了微軟正在使用 Go 語言重寫 TypeScript 編譯器, 並取得了顯著的性能提升.
 
-Anders Hejlsberg 是 TypeScript 的主要设计者, 也是 C# 和 Delphi 的最初设计者.
-为了解决性能问题, 他带领的团队没有使用 C# 或者 Rust 等语言, 而是使用了 Go,
-在社区中引起了一些质疑的声音.
+Anders Hejlsberg 是 TypeScript 的主要設計者, 也是 C# 和 Delphi 的最初設計者.
+為瞭解決性能問題, 他帶領的團隊沒有使用 C# 或者 Rust 等語言, 而是使用了 Go,
+在社區中引起了一些質疑的聲音.
 
-我认为最重要的原因就是新项目是 "port", 而不是 "rewrite". 在一众备选项中,
-Go 的语法是最容易从 TypeScript 迁移过去的.
+我認為最重要的原因就是新項目是 "port", 而不是 "rewrite". 在一眾備選項中,
+Go 的語法是最容易從 TypeScript 遷移過去的.
 
-我理解微软开发团队这样的做法, 比如 VS Code 在宣传的时候也会使用 create-react-app
-这样的 Facebook 项目来宣传. 可见, 微软想要与技术社区进行融合的意愿很强.
+我理解微軟開發團隊這樣的做法, 比如 VS Code 在宣傳的時候也會使用 create-react-app
+這樣的 Facebook 項目來宣傳. 可見, 微軟想要與技術社區進行融合的意願很強.
 
-## 为什么选择 Go?
+## 為什麼選擇 Go?
 
-根据 TypeScript 官方博客 [A 10x Faster TypeScript][faster-ts] 的介绍, 微软选择
-Go 语言进行编译器移植的原因主要包括:
+根據 TypeScript 官方博客 [A 10x Faster TypeScript][faster-ts] 的介紹, 微軟選擇
+Go 語言進行編譯器移植的原因主要包括:
 
-1. **可维护性**: Go 语言拥有高效且易于理解的垃圾收集器, 简单易学的语法以及良好的
-   开发者生态系统, 使得维护大型代码库更加容易
-2. **性能优势**: Go 编译器的多方面优化使其非常适合构建编译器这类程序, 并且与
-   JavaScript 版本相比, 能够显著提高编译速度
-3. **跨平台能力**: Go 的原生编译特性让 TypeScript 编译器能够轻松构建为适用于
-   各种操作系统的单一二进制文件
-4. **开发效率**: Go 语言的错误处理模式, 简单的语法和快速的编译时间,
-   让开发团队能够快速迭代和实现功能
+1. **可維護性**: Go 語言擁有高效且易於理解的垃圾收集器, 簡單易學的語法以及良好的
+   開發者生態系統, 使得維護大型代碼庫更加容易
+2. **性能優勢**: Go 編譯器的多方面優化使其非常適合構建編譯器這類程序, 並且與
+   JavaScript 版本相比, 能夠顯著提高編譯速度
+3. **跨平臺能力**: Go 的原生編譯特性讓 TypeScript 編譯器能夠輕鬆構建為適用於
+   各種操作系統的單一二進制文件
+4. **開發效率**: Go 語言的錯誤處理模式, 簡單的語法和快速的編譯時間,
+   讓開發團隊能夠快速迭代和實現功能
 
-C/C++ 的跨平台能力较差, 比如不支持简单编译为各个平台的单一二进制文件.
-而 Rust 的内存安全模型过于复杂, 不适合作为 port 项目.
-C# 应该更多是语言特性上与 TypeScript 有区别, 严格的 OOP 风格不适合作为 port.
+C/C++ 的跨平臺能力較差, 比如不支持簡單編譯為各個平臺的單一二進制文件.
+而 Rust 的內存安全模型過於複雜, 不適合作為 port 項目.
+C# 應該更多是語言特性上與 TypeScript 有區別, 嚴格的 OOP 風格不適合作為 port.
 
-## 当前进展与兼容性
+## 當前進展與兼容性
 
 [repo] 的 init commit 是 2024-10-01 <https://github.com/microsoft/typescript-go/commit/cdcc0cb808d8ad0c91d9520edac3d815bff92514>,
-仅用大概半年的时间, 就取得了显著的进展, 据说完成了 80% 的代码迁移.
+僅用大概半年的時間, 就取得了顯著的進展, 據說完成了 80% 的代碼遷移.
 
-根据 GitHub 仓库的 README 文档, TypeScript 的 Go 原生移植版(称为"TypeScript 7")
-目前仍处于积极开发阶段. 当前已完成的功能包括:
+根據 GitHub 倉庫的 README 文檔, TypeScript 的 Go 原生移植版(稱為"TypeScript 7")
+目前仍處於積極開發階段. 當前已完成的功能包括:
 
-- 程序创建(读取 `lib`, `target`, `reference` 等配置)
-- 解析/扫描(读取源文本并确定语法结构)
+- 程序創建(讀取 `lib`, `target`, `reference` 等配置)
+- 解析/掃描(讀取源文本並確定語法結構)
 - 命令行和 `tsconfig.json` 解析
-- 类型解析和类型检查
+- 類型解析和類型檢查
 
-为了实现迁移, 微软会在 TypeScript 6 (仍然是 TypeScript) 的时候, 做一些功能调整,
-以保证将来发布 TypeScript 7 (Go 版本) 时大家可以无缝迁移.
+為了實現遷移, 微軟會在 TypeScript 6 (仍然是 TypeScript) 的時候, 做一些功能調整,
+以保證將來發布 TypeScript 7 (Go 版本) 時大家可以無縫遷移.
 
-TypeScript 6 和 TypeScript 7 的 API 是完全兼容的, 所以开发者可以随时升级或降级.
-在 TypeScript 7 被完全接受前, TypeScript 6 会继续开发, 以作为备选.
+TypeScript 6 和 TypeScript 7 的 API 是完全兼容的, 所以開發者可以隨時升級或降級.
+在 TypeScript 7 被完全接受前, TypeScript 6 會繼續開發, 以作為備選.
 
-## 社区反应
+## 社區反應
 
-这一项目在公布后引起了开发社区的广泛关注, 截至目前 GitHub 仓库已获得超过 11.9k
-的星标. 许多开发者对于提升 TypeScript 性能的前景表示期待, 特别是那些处理大型
-代码库的团队.
+這一項目在公佈後引起了開發社區的廣泛關注, 截至目前 GitHub 倉庫已獲得超過 11.9k
+的星標. 許多開發者對於提升 TypeScript 性能的前景表示期待, 特別是那些處理大型
+代碼庫的團隊.
 
-社区讨论主要集中在性能提升, 工具链兼容性以及 [为什么选择 Go][why-go]
-而非其他语言 (如 Rust) 上.
+社區討論主要集中在性能提升, 工具鏈兼容性以及 [為什麼選擇 Go][why-go]
+而非其他語言 (如 Rust) 上.
 
-## 相关链接
+## 相關鏈接
 
 - [A 10x Faster TypeScript][faster-ts]
-- [GitHub 仓库: typescript-go][repo]
+- [GitHub 倉庫: typescript-go][repo]
 
 [faster-ts]: https://devblogs.microsoft.com/typescript/typescript-native-port/
 [repo]: https://github.com/microsoft/typescript-go

@@ -1,13 +1,13 @@
 ---
-title: 2019 年中 社交媒体中最流行的语言是?
+title: 2019 年中 社交媒體中最流行的語言是?
 categories: [programming-language, php]
 ---
 
-最近看到 PHP 核心开发成员 [Laruence 在微博聊语言喷子][1].
-我是非常赞同他的基本观点的, 语言只是解决问题的具体实施细则,
-更重要的不是语言本身, 而是解决问题的抽象方法.
+最近看到 PHP 核心開發成員 [Laruence 在微博聊語言噴子][1].
+我是非常贊同他的基本觀點的, 語言只是解決問題的具體實施細則,
+更重要的不是語言本身, 而是解決問題的抽象方法.
 
-下面这则 2019 年的排行还是可以看出 PHP 仍在一阵.
+下面這則 2019 年的排行還是可以看出 PHP 仍在一陣.
 
 [1]: https://weibo.com/1170999921/IDrEfgE2Z
 
@@ -15,17 +15,17 @@ categories: [programming-language, php]
 
 <https://redmonk.com/sogrady/2019/07/18/language-rankings-6-19/>
 
-![原图](https://redmonk.com/sogrady/files/2019/07/lang.rank_.619.png)
+![原圖](https://redmonk.com/sogrady/files/2019/07/lang.rank_.619.png)
 
-参考两个社交媒体:
+參考兩個社交媒體:
 
 - GitHub
 - Stack Overflow
 
-X 轴的 GitHub 可以代表开源流行度.
-Y 轴的 Stack Overflow 可以代表新人活跃度.
+X 軸的 GitHub 可以代表開源流行度.
+Y 軸的 Stack Overflow 可以代表新人活躍度.
 
-x + y 为总流行度, x > y 是更硬核的语言, x < y 是更大众的语言.
+x + y 為總流行度, x > y 是更硬核的語言, x < y 是更大眾的語言.
 
-可以看出 Rust 开源流行但新人问题少. (相对)
-Visual Basic 新人问题多但开源不够流行. (相对)
+可以看出 Rust 開源流行但新人問題少. (相對)
+Visual Basic 新人問題多但開源不夠流行. (相對)
